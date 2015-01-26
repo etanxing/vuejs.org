@@ -38,8 +38,9 @@
         <li><a href="/vuejs.org/guide/" class="nav-link">入门</a></li>
 <li><a href="/vuejs.org/api/" class="nav-link current">API 索引</a></li>
 <li><a href="/vuejs.org/examples/" class="nav-link">示例</a></li>
-<li><a href="/vuejs.org/blog/" class="nav-link">Blog</a></li>
+<li><a href="http://vuejs.org/blog/" target="_blank" class="nav-link">Blog (英文)</a></li>
 <li><a href="https://github.com/yyx990803/vue" target="_blank" class="nav-link">GitHub</a></li>
+<li><a href="http://vuejs.org/" target="_blank" class="nav-link">English</a></li>
     </ul>
 </div>
         
@@ -52,8 +53,9 @@
         <li><a href="/vuejs.org/guide/" class="nav-link">入门</a></li>
 <li><a href="/vuejs.org/api/" class="nav-link current">API 索引</a></li>
 <li><a href="/vuejs.org/examples/" class="nav-link">示例</a></li>
-<li><a href="/vuejs.org/blog/" class="nav-link">Blog</a></li>
+<li><a href="http://vuejs.org/blog/" target="_blank" class="nav-link">Blog (英文)</a></li>
 <li><a href="https://github.com/yyx990803/vue" target="_blank" class="nav-link">GitHub</a></li>
+<li><a href="http://vuejs.org/" target="_blank" class="nav-link">English</a></li>
     </ul>
     <div class="list">
         <h2>Api</h2>
@@ -73,7 +75,7 @@
             
                 <li><a href="/vuejs.org/api/filters.html" class="sidebar-link">Filters</a></li>
             
-            <li><a href="http://legacy.vuejs.org">Looking for 0.10 docs?</a></li>
+            <li><a href="http://legacy.vuejs.org">旧版 0.10 文档</a></li>
             <li style="margin:10px 0 3px">
               <script data-gittip-username="yyx990803"
                 data-gittip-widget="button"
@@ -261,7 +263,7 @@ vm.aDouble <span class="comment">// -&gt; 4</span>
 </pre></td></tr></table></figure>
 
 
-<p>Param attributes can also contain interpolation tags. The interpolation will be evaluated against the parent, and under the hood they will be compiled as <a href="/api/directives.html#v-with"><code>v-with</code></a>, which means when the value of the interpolated expression changes, the component’s corresponding property will also be updated:</p>
+<p>Param attributes can also contain interpolation tags. The interpolation will be evaluated against the parent, and under the hood they will be compiled as <a href="../api/directives.html#v-with"><code>v-with</code></a>, which means when the value of the interpolated expression changes, the component’s corresponding property will also be updated:</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre>1
 </pre></td><td class="code"><pre><span class="tag">&lt;<span class="title">param-demo</span> <span class="attribute">message</span>=<span class="value">"{&#123;parentMessage&#125;}"</span>&gt;</span><span class="tag">&lt;/<span class="title">param-demo</span>&gt;</span>
 </pre></td></tr></table></figure>
@@ -289,7 +291,7 @@ vm.aDouble <span class="comment">// -&gt; 4</span>
 <ul>
 <li><strong>Type:</strong> <code>String</code></li>
 </ul>
-<p>A string template to be inserted into <code>vm.$el</code>. Any existing markup inside <code>vm.$el</code> will be overwritten, unless <a href="/guide/components.html#Content_Insertion">content insertion points</a> are present in the template. If the <strong>replace</strong> option is <code>true</code>, the template will replace <code>vm.$el</code> entirely.</p>
+<p>A string template to be inserted into <code>vm.$el</code>. Any existing markup inside <code>vm.$el</code> will be overwritten, unless <a href="../guide/components.html#Content_Insertion">content insertion points</a> are present in the template. If the <strong>replace</strong> option is <code>true</code>, the template will replace <code>vm.$el</code> entirely.</p>
 <p>If it starts with <code>#</code> it will be used as a querySelector and use the selected element’s innerHTML and the template string. This allows the use of the common <code>&lt;script type=&quot;x-template&quot;&gt;</code> trick to include templates.</p>
 <p class="tip">Vue.js uses DOM-based templating. The compiler walks through DOM elements and looks for directives and creates data bindings. This means all Vue.js templates are parsable HTML that can be converted into actual DOM elements by the browser. Vue.js converts string templates into DOM fragments so they can be cloned when creating more Vue instances. If you want your templates to be valid HTML, you can configure the directive prefix to start with <code>data-</code>.</p>
 
@@ -349,27 +351,27 @@ vm.aDouble <span class="comment">// -&gt; 4</span>
 <ul>
 <li><strong>Type:</strong> <code>Object</code></li>
 </ul>
-<p>A hash of directives to be made available to the Vue instance. For details on how to write a custom directive, see <a href="/guide/custom-directive.html">Writing Custom Directives</a>.</p>
+<p>A hash of directives to be made available to the Vue instance. For details on how to write a custom directive, see <a href="../guide/custom-directive.html">Writing Custom Directives</a>.</p>
 <h3 id="filters">filters</h3>
 <ul>
 <li><strong>Type:</strong> <code>Object</code></li>
 </ul>
-<p>A hash of filters to be made available to the Vue instance. For details on how to write a custom filter, see <a href="/guide/custom-filter.html">Writing Custom Filters</a>.</p>
+<p>A hash of filters to be made available to the Vue instance. For details on how to write a custom filter, see <a href="../guide/custom-filter.html">Writing Custom Filters</a>.</p>
 <h3 id="components">components</h3>
 <ul>
 <li><strong>Type:</strong> <code>Object</code></li>
 </ul>
-<p>A hash of components to be made available to the Vue instance. For details on how to extend and compose Vue instances, see <a href="/guide/components.html">Component System</a>.</p>
+<p>A hash of components to be made available to the Vue instance. For details on how to extend and compose Vue instances, see <a href="../guide/components.html">Component System</a>.</p>
 <h3 id="partials">partials</h3>
 <ul>
 <li><strong>Type:</strong> <code>Object</code></li>
 </ul>
-<p>A hash of partials to be made available to the Vue instance. Also see <a href="/api/directives.html#v-partial">v-partial</a>.</p>
+<p>A hash of partials to be made available to the Vue instance. Also see <a href="../api/directives.html#v-partial">v-partial</a>.</p>
 <h3 id="transitions">transitions</h3>
 <ul>
 <li><strong>Type:</strong> <code>Object</code></li>
 </ul>
-<p>A hash of transitions to be made available to the Vue instance. For details see the guide on <a href="/guide/transitions.html">Transitions</a>.</p>
+<p>A hash of transitions to be made available to the Vue instance. For details see the guide on <a href="../guide/transitions.html">Transitions</a>.</p>
 <h2 id="Others">Others</h2>
 <h3 id="inherit">inherit</h3>
 <ul>
@@ -535,7 +537,7 @@ console.log(vm) <span class="comment">// -&gt; CoolStuff {$el: null, ...}</span>
 
 
 
-    <div class="footer">发现了问题或想要贡献？ <a href="https://github.com/vuejs/vuejs.org" target="_blank">来 Github 给这个网站 Fork 吧</a>！</div>
+    <div class="footer">发现了问题或想要贡献？来 Github 给 Vue.js <a href="https://github.com/vuejs/vuejs.org" target="_blank">英文站点</a>或<a href="https://github.com/Jinjiang/vuejs.org/tree/lang-zh" target="_blank">中文翻译</a>来个 Fork 吧！</div>
 </div>
             
         </div>

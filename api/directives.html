@@ -38,8 +38,9 @@
         <li><a href="/vuejs.org/guide/" class="nav-link">入门</a></li>
 <li><a href="/vuejs.org/api/" class="nav-link current">API 索引</a></li>
 <li><a href="/vuejs.org/examples/" class="nav-link">示例</a></li>
-<li><a href="/vuejs.org/blog/" class="nav-link">Blog</a></li>
+<li><a href="http://vuejs.org/blog/" target="_blank" class="nav-link">Blog (英文)</a></li>
 <li><a href="https://github.com/yyx990803/vue" target="_blank" class="nav-link">GitHub</a></li>
+<li><a href="http://vuejs.org/" target="_blank" class="nav-link">English</a></li>
     </ul>
 </div>
         
@@ -52,8 +53,9 @@
         <li><a href="/vuejs.org/guide/" class="nav-link">入门</a></li>
 <li><a href="/vuejs.org/api/" class="nav-link current">API 索引</a></li>
 <li><a href="/vuejs.org/examples/" class="nav-link">示例</a></li>
-<li><a href="/vuejs.org/blog/" class="nav-link">Blog</a></li>
+<li><a href="http://vuejs.org/blog/" target="_blank" class="nav-link">Blog (英文)</a></li>
 <li><a href="https://github.com/yyx990803/vue" target="_blank" class="nav-link">GitHub</a></li>
+<li><a href="http://vuejs.org/" target="_blank" class="nav-link">English</a></li>
     </ul>
     <div class="list">
         <h2>Api</h2>
@@ -73,7 +75,7 @@
             
                 <li><a href="/vuejs.org/api/filters.html" class="sidebar-link">Filters</a></li>
             
-            <li><a href="http://legacy.vuejs.org">Looking for 0.10 docs?</a></li>
+            <li><a href="http://legacy.vuejs.org">旧版 0.10 文档</a></li>
             <li style="margin:10px 0 3px">
               <script data-gittip-username="yyx990803"
                 data-gittip-widget="button"
@@ -206,13 +208,13 @@
 <li>This directive requires an argument.</li>
 <li>This directive requires the value to be a Function or a statement.</li>
 </ul>
-<p>Attaches an event listener to the element. The event type is denoted by the argument. It is also the only directive that can be used with the <code>key</code> filter. For more details see <a href="/guide/events.html">Listening for Events</a>.</p>
+<p>Attaches an event listener to the element. The event type is denoted by the argument. It is also the only directive that can be used with the <code>key</code> filter. For more details see <a href="../guide/events.html">Listening for Events</a>.</p>
 <h3 id="v-model">v-model</h3>
 <ul>
 <li>This directive can only be used on <code>&lt;input&gt;</code>, <code>&lt;select&gt;</code> or <code>&lt;textarea&gt;</code> elements.</li>
 <li>Directive params: <code>lazy</code>, <code>number</code>, <code>options</code></li>
 </ul>
-<p>Create a two-way binding on a form input element. Data is synced on every <code>input</code> event by default. For detailed examples see <a href="/guide/forms.html">Handling Forms</a>.</p>
+<p>Create a two-way binding on a form input element. Data is synced on every <code>input</code> event by default. For detailed examples see <a href="../guide/forms.html">Handling Forms</a>.</p>
 <h3 id="v-if">v-if</h3>
 <ul>
 <li>This directive can trigger transitions.</li>
@@ -280,7 +282,7 @@
 </pre></td></tr></table></figure>
 
 
-<p>For detailed examples, see <a href="/guide/list.html">Displaying a List</a>.</p>
+<p>For detailed examples, see <a href="../guide/list.html">Displaying a List</a>.</p>
 <h3 id="v-with">v-with</h3>
 <ul>
 <li>This directive can only be used with <code>v-component</code>.</li>
@@ -354,9 +356,9 @@
 <ul>
 <li>Directive params: <code>keep-alive</code>, <code>wait-for</code>, <code>transition-mode</code></li>
 </ul>
-<p>Compile this element as a child ViewModel with a registered component constructor. This can be used with <code>v-with</code> to inehrit data from the parent. For more details see <a href="/guide/components.html">Component System</a>.</p>
+<p>Compile this element as a child ViewModel with a registered component constructor. This can be used with <code>v-with</code> to inehrit data from the parent. For more details see <a href="../guide/components.html">Component System</a>.</p>
 <h3 id="v-ref">v-ref</h3>
-<p>Register a reference to a child component on its parent for easier access. Only respected when used in combination with <code>v-component</code> or <code>v-repeat</code>. The component instance will be accessible on its parent’s <code>$</code> object. For an example, see <a href="/guide/components.html#Child_Reference">child reference</a>.</p>
+<p>Register a reference to a child component on its parent for easier access. Only respected when used in combination with <code>v-component</code> or <code>v-repeat</code>. The component instance will be accessible on its parent’s <code>$</code> object. For an example, see <a href="../guide/components.html#Child_Reference">child reference</a>.</p>
 <p>When used with <code>v-repeat</code>, the value will be an Array containing all the child Vue instances corresponding to the Array they are bound to.</p>
 <h3 id="v-el">v-el</h3>
 <p>Register a reference to a DOM element on its owner Vue instance for easier access. e.g. <code>&lt;div v-el=&quot;hi&quot;&gt;</code> will be accessible as <code>vm.$$.hi</code>.</p>
@@ -378,7 +380,7 @@
 
 <h3 id="v-transition">v-transition</h3>
 <p>Notify Vue.js to apply transitions to this element. The transition classes are applied when certain transition-triggering directives modify the element, or when the Vue instance’s DOM manipulation methods are called.</p>
-<p>For details, see <a href="/guide/transitions.html">the guide on transitions</a>.</p>
+<p>For details, see <a href="../guide/transitions.html">the guide on transitions</a>.</p>
 <h2 id="Empty_Directives">Empty Directives</h2>
 <blockquote>
 <p>Empty directives do not require and will ignore their attribute value.</p>
@@ -388,7 +390,7 @@
 <h3 id="v-cloak">v-cloak</h3>
 <p>This property remains on the element until the associated ViewModel finishes compilation. Combined with CSS rules such as <code>[v-cloak] { display: none }</code>, this directive can be used to hide un-compiled mustache bindings until the ViewModel is ready.</p>
 
-    <div class="footer">发现了问题或想要贡献？ <a href="https://github.com/vuejs/vuejs.org" target="_blank">来 Github 给这个网站 Fork 吧</a>！</div>
+    <div class="footer">发现了问题或想要贡献？来 Github 给 Vue.js <a href="https://github.com/vuejs/vuejs.org" target="_blank">英文站点</a>或<a href="https://github.com/Jinjiang/vuejs.org/tree/lang-zh" target="_blank">中文翻译</a>来个 Fork 吧！</div>
 </div>
             
         </div>

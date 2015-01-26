@@ -38,8 +38,9 @@
         <li><a href="/vuejs.org/guide/" class="nav-link current">入门</a></li>
 <li><a href="/vuejs.org/api/" class="nav-link">API 索引</a></li>
 <li><a href="/vuejs.org/examples/" class="nav-link">示例</a></li>
-<li><a href="/vuejs.org/blog/" class="nav-link">Blog</a></li>
+<li><a href="http://vuejs.org/blog/" target="_blank" class="nav-link">Blog (英文)</a></li>
 <li><a href="https://github.com/yyx990803/vue" target="_blank" class="nav-link">GitHub</a></li>
+<li><a href="http://vuejs.org/" target="_blank" class="nav-link">English</a></li>
     </ul>
 </div>
         
@@ -52,8 +53,9 @@
         <li><a href="/vuejs.org/guide/" class="nav-link current">入门</a></li>
 <li><a href="/vuejs.org/api/" class="nav-link">API 索引</a></li>
 <li><a href="/vuejs.org/examples/" class="nav-link">示例</a></li>
-<li><a href="/vuejs.org/blog/" class="nav-link">Blog</a></li>
+<li><a href="http://vuejs.org/blog/" target="_blank" class="nav-link">Blog (英文)</a></li>
 <li><a href="https://github.com/yyx990803/vue" target="_blank" class="nav-link">GitHub</a></li>
+<li><a href="http://vuejs.org/" target="_blank" class="nav-link">English</a></li>
     </ul>
     <div class="list">
         <h2>Guide</h2>
@@ -89,7 +91,7 @@
             
                 <li><a href="/vuejs.org/guide/faq.html" class="sidebar-link">常见问题</a></li>
             
-            <li><a href="http://legacy.vuejs.org">Looking for 0.10 docs?</a></li>
+            <li><a href="http://legacy.vuejs.org">旧版 0.10 文档</a></li>
             <li style="margin:10px 0 3px">
               <script data-gittip-username="yyx990803"
                 data-gittip-widget="button"
@@ -104,8 +106,8 @@
     <div id="ad">
         <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs" id="_carbonads_js"></script>
     </div>
-    <p>Vue.js’ inline expressions are very convenient, but the best use cases for them are simple boolean operations or string concatenations. For more complicated logic, you should use <strong>computed properties</strong>.</p>
-<p>In Vue.js, you define computed properties with the <code>computed</code> option:</p>
+    <p>Vue.js 的内联表达式非常方便，但它最好的用武之地其实是简单的布尔操作或字符串拼接。如果涉及更复杂的逻辑，你应该使用<strong>可推导的属性</strong>。</p>
+<p>在 Vue.js 中，你可以通过 <code>computed</code> 选项定义可推导的属性：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre>1
 2
 3
@@ -153,7 +155,7 @@ demo.fullName <span class="comment">// 'Foo Bar'</span>
 </pre></td></tr></table></figure>
 
 
-<p>When you only need the getter, you can provide a single function instead of an object:</p>
+<p>当你只需要 getter 的时候，你可以用一个简单的函数替代该对象：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre>1
 2
 3
@@ -171,12 +173,12 @@ computed: {
 </pre></td></tr></table></figure>
 
 
-<p>A computed property is essentially a property defined with getter/setter functions. You can use a computed property just like a normal property, but when you access it, you get the value returned by the getter function; when you change its value, you trigger the setter function passing in the new value as its argument.</p>
-<p class="tip">Before Vue.js 0.11 there used to be a dependency collection gotcha which requires users to explicitly list dependencies when conditional statements are involved. Starting with 0.11 it is no longer necessary to do so.</p>
+<p>一个可推导的属性本质上是一个被 getter/setter 函数定义了的属性。可推导的属性使用起来和一般属性一样，只是在访问它的时候，你会得到 getter 函数返回的值，改变它的时候，你会触发 setter 函数并接收新赋的值。</p>
+<p class="tip">在 Vue.js 0.11 之前的版本中，曾经有依赖收集机制，需要用户在条件语句中显性列出依赖关系。而在 0.11 之后你已经无需这样做了。</p>
 
-<p>Next, let’s learn about how to <a href="/guide/custom-directive.html">write a custom directive</a>.</p>
+<p>接下来，我们学一学如何<a href="../guide/custom-directive.html">撰写一个自定义的指令</a>.</p>
 
-    <div class="footer">发现了问题或想要贡献？ <a href="https://github.com/vuejs/vuejs.org" target="_blank">来 Github 给这个网站 Fork 吧</a>！</div>
+    <div class="footer">发现了问题或想要贡献？来 Github 给 Vue.js <a href="https://github.com/vuejs/vuejs.org" target="_blank">英文站点</a>或<a href="https://github.com/Jinjiang/vuejs.org/tree/lang-zh" target="_blank">中文翻译</a>来个 Fork 吧！</div>
 </div>
             
         </div>

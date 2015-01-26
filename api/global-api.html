@@ -38,8 +38,9 @@
         <li><a href="/vuejs.org/guide/" class="nav-link">入门</a></li>
 <li><a href="/vuejs.org/api/" class="nav-link current">API 索引</a></li>
 <li><a href="/vuejs.org/examples/" class="nav-link">示例</a></li>
-<li><a href="/vuejs.org/blog/" class="nav-link">Blog</a></li>
+<li><a href="http://vuejs.org/blog/" target="_blank" class="nav-link">Blog (英文)</a></li>
 <li><a href="https://github.com/yyx990803/vue" target="_blank" class="nav-link">GitHub</a></li>
+<li><a href="http://vuejs.org/" target="_blank" class="nav-link">English</a></li>
     </ul>
 </div>
         
@@ -52,8 +53,9 @@
         <li><a href="/vuejs.org/guide/" class="nav-link">入门</a></li>
 <li><a href="/vuejs.org/api/" class="nav-link current">API 索引</a></li>
 <li><a href="/vuejs.org/examples/" class="nav-link">示例</a></li>
-<li><a href="/vuejs.org/blog/" class="nav-link">Blog</a></li>
+<li><a href="http://vuejs.org/blog/" target="_blank" class="nav-link">Blog (英文)</a></li>
 <li><a href="https://github.com/yyx990803/vue" target="_blank" class="nav-link">GitHub</a></li>
+<li><a href="http://vuejs.org/" target="_blank" class="nav-link">English</a></li>
     </ul>
     <div class="list">
         <h2>Api</h2>
@@ -73,7 +75,7 @@
             
                 <li><a href="/vuejs.org/api/filters.html" class="sidebar-link">Filters</a></li>
             
-            <li><a href="http://legacy.vuejs.org">Looking for 0.10 docs?</a></li>
+            <li><a href="http://legacy.vuejs.org">旧版 0.10 文档</a></li>
             <li style="margin:10px 0 3px">
               <script data-gittip-username="yyx990803"
                 data-gittip-widget="button"
@@ -154,8 +156,8 @@
 <ul>
 <li><strong>options</strong> <code>Object</code></li>
 </ul>
-<p>Create a “subclass” of the base Vue constructor. All <a href="/api/options.html">instantiation options</a> can be used here. The special cases to note here are <code>el</code> and <code>data</code>, which must be functions in this case.</p>
-<p>Internally, <code>Vue.extend()</code> is called on all component options before instantiating the components. For more details regarding components, see <a href="/guide/components.html">Component System</a>.</p>
+<p>Create a “subclass” of the base Vue constructor. All <a href="../api/options.html">instantiation options</a> can be used here. The special cases to note here are <code>el</code> and <code>data</code>, which must be functions in this case.</p>
+<p>Internally, <code>Vue.extend()</code> is called on all component options before instantiating the components. For more details regarding components, see <a href="../guide/components.html">Component System</a>.</p>
 <p><strong>Example</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre>1
 2
@@ -199,25 +201,25 @@ profile.$appendTo(<span class="string">'body'</span>)
 <li><strong>id</strong> <code>String</code></li>
 <li><strong>definition</strong> <code>Function</code> or <code>Object</code> <em>optional</em></li>
 </ul>
-<p>Register or retrieve a global custom directive. For more details see <a href="/guide/custom-directive.html">Writing Custom Directives</a>.</p>
+<p>Register or retrieve a global custom directive. For more details see <a href="../guide/custom-directive.html">Writing Custom Directives</a>.</p>
 <h3 id="Vue-filter(_id,_[definition]_)">Vue.filter( id, [definition] )</h3>
 <ul>
 <li><strong>id</strong> <code>String</code></li>
 <li><strong>definition</strong> <code>Function</code> <em>optional</em></li>
 </ul>
-<p>Register or retrieve a global custom filter. For more details see <a href="/guide/custom-filter.html">Writing Custom Filters</a>.</p>
+<p>Register or retrieve a global custom filter. For more details see <a href="../guide/custom-filter.html">Writing Custom Filters</a>.</p>
 <h3 id="Vue-component(_id,_[definition]_)">Vue.component( id, [definition] )</h3>
 <ul>
 <li><strong>id</strong> <code>String</code></li>
 <li><strong>definition</strong> <code>Function Constructor</code> or <code>Object</code> <em>optional</em></li>
 </ul>
-<p>Register or retrieve a global component. For more details see <a href="/guide/components.html">Component System</a>.</p>
+<p>Register or retrieve a global component. For more details see <a href="../guide/components.html">Component System</a>.</p>
 <h3 id="Vue-transition(_id,_[definition]_)">Vue.transition( id, [definition] )</h3>
 <ul>
 <li><strong>id</strong> <code>String</code></li>
 <li><strong>definition</strong> <code>Object</code> <em>optional</em></li>
 </ul>
-<p>Register or retrieve a global JavaScript transition effect definition. For more details see the guide for <a href="/guide/transitions.html#JavaScript_Functions">JavaScript Transitions</a>.</p>
+<p>Register or retrieve a global JavaScript transition effect definition. For more details see the guide for <a href="../guide/transitions.html#JavaScript_Functions">JavaScript Transitions</a>.</p>
 <h3 id="Vue-partial(_id,_[definition]_)">Vue.partial( id, [definition] )</h3>
 <ul>
 <li><strong>id</strong> <code>String</code></li>
@@ -275,11 +277,11 @@ profile.$appendTo(<span class="string">'body'</span>)
 <li><strong>plugin</strong> <code>Object</code> or <code>Function</code></li>
 <li><strong>args…</strong> <em>optional</em></li>
 </ul>
-<p>Mount a Vue.js plugin. If the plugin is an Object, it must have an <code>install</code> method. If it is a function itself, it will be treated as the install method. The install method will be called with Vue as the argument. For more details, see <a href="/guide/extending.html#Extend_with_Plugins">Plugins</a>.</p>
+<p>Mount a Vue.js plugin. If the plugin is an Object, it must have an <code>install</code> method. If it is a function itself, it will be treated as the install method. The install method will be called with Vue as the argument. For more details, see <a href="../guide/extending.html#Extend_with_Plugins">Plugins</a>.</p>
 <h3 id="Vue-util">Vue.util</h3>
 <p>Exposes the internal <code>util</code> module, which contains a number of utility methods. This is intended for advanced plugin/directive authoring, so you will need to look at the source code to see what’s available.</p>
 
-    <div class="footer">发现了问题或想要贡献？ <a href="https://github.com/vuejs/vuejs.org" target="_blank">来 Github 给这个网站 Fork 吧</a>！</div>
+    <div class="footer">发现了问题或想要贡献？来 Github 给 Vue.js <a href="https://github.com/vuejs/vuejs.org" target="_blank">英文站点</a>或<a href="https://github.com/Jinjiang/vuejs.org/tree/lang-zh" target="_blank">中文翻译</a>来个 Fork 吧！</div>
 </div>
             
         </div>
