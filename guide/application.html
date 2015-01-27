@@ -106,22 +106,22 @@
     <div id="ad">
         <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs" id="_carbonads_js"></script>
     </div>
-    <p>Vue.js is designed to be as flexible as possible - it’s just an interface library that doesn’t enforce any architectural decisions. While this can be very useful for rapid prototyping, it could be a challenge for those with less experience to build larger scale applications with it. The following is an opinionated perspective on how to organize larger projects when using Vue.js.</p>
-<h2 id="Modularization">Modularization</h2>
-<p>Although the standalone build of Vue.js can be used as a global, it is often better to utilize a modularized build system to better organize your code. The recommended approach of doing so is by writing your source code in CommonJS modules (the format used by Node.js, and also the format used by Vue.js source code) and bundle them using <a href="http://browserify.org/" target="_blank">Browserify</a> or <a href="http://webpack.github.io/" target="_blank">Webpack</a>.</p>
-<p>Here are some build setup examples on GitHub:</p>
+    <p>Vue.js 会设计得尽量灵活——它只是一个接口库，不迁就于任何架构决策。尽管它在快速原型开发中显得非常有用，但对于经验较少的人来说，用它来构建大规模应用程序会有一定的难度。接下来我们会在如何使用 Vue.js 组织大型项目这方面提供一些的观点。</p>
+<h2 id="模块化">模块化</h2>
+<p>虽然独立构建的 Vue.js 可以被用作一个全局变量，但是它通常更适合应用在一个模块化系统中，以便更好的组织你的代码。我们建议你在 CommonJS 的模块下撰写源代码 (这是 Node.js 使用的格式，也是 Vue.js 源代码使用的格式)，并通过 <a href="http://browserify.org/" target="_blank">Browserify</a> 或 <a href="http://webpack.github.io/" target="_blank">Webpack</a> 把它们捆绑起来。</p>
+<p>Github上有一些构建的示例：</p>
 <ul>
 <li><a href="https://github.com/vuejs/vue-browserify-example" target="_blank">Vue + Browserify</a></li>
 <li><a href="https://github.com/vuejs/vue-webpack-example" target="_blank">Vue + Webpack</a></li>
 </ul>
-<h2 id="Single_File_Components">Single File Components</h2>
-<p>In a typical Vue.js project we will be breaking up our code into many small components, and it would be nice to have each component encapsulate its CSS styles, template and JavaScript definition in the same place. A bonus for using the previously mentioned build tools is that they both provided mechanisms to transform the source code before bundling them together, and with a bit of pre-processing we can write our components like this:</p>
+<h2 id="一个文件对应一个组件">一个文件对应一个组件</h2>
+<p>在一个典型的 Vue.js 项目里，我们将会打散我们的代码，变成若干小的组件，如果能够根据组件划分把 CSS 样式也独立封装起来就更好了。刚才提过的2个构建工具都有一个额外的机制，那就是在把源代码捆绑在一起之前可以对其进行转换。再结合一些预处理，我们就可以这样撰写组件了：</p>
 <p><img src="../images/vueify.png" alt=""></p>
-<p>If you are into pre-processors, you can even do this:</p>
+<p>如果你有预处理程序，你甚至可以这样写：</p>
 <p><img src="../images/vueify_with_pre.png" alt=""></p>
-<p>This is achieved via using the <a href="https://github.com/vuejs/vueify" target="_blank">Vueify</a> transform for Browserify, or with <a href="https://github.com/vuejs/vue-loader" target="_blank">Vue-loader</a> for Webpack.</p>
-<h2 id="Routing">Routing</h2>
-<p>You can implement some rudimentary routing logic by manually listening on hashchange and utilizing a dynamic <code>v-component</code>.</p>
+<p>它已经通过 <a href="https://github.com/vuejs/vueify" target="_blank">Vueify</a> 为 Browserify 进行转换，或通过 <a href="https://github.com/vuejs/vue-loader" target="_blank">Vue-loader</a> 为 Webpack 进行转换。</p>
+<h2 id="路由">路由</h2>
+<p>你可以手动监听 hashchange 并利用一个动态的 <code>v-component</code> 实现一些基本的路由逻辑。</p>
 <p><strong>Example:</strong></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre>1
 2
@@ -157,12 +157,12 @@ app.currentView = <span class="string">'page1'</span>
 </pre></td></tr></table></figure>
 
 
-<p>With this mechanism it’s very easy to leverage standalone routing libraries such as <a href="https://github.com/visionmedia/page.js" target="_blank">Page.js</a> or <a href="https://github.com/flatiron/director" target="_blank">Director</a>.</p>
-<h2 id="Communication_with_Server">Communication with Server</h2>
-<p>All Vue instances can have their raw <code>$data</code> directly serialized with <code>JSON.stringify()</code> with no additional effort. You can use any Ajax component you like, for example <a href="https://github.com/visionmedia/superagent" target="_blank">SuperAgent</a>. It also plays nicely with no-backend services such as Firebase.</p>
-<h2 id="Unit_Testing">Unit Testing</h2>
-<p>Anything compatible with a CommonJS-based build system works. A recommendation is using the <a href="http://karma-runner.github.io/0.12/index.html" target="_blank">Karma</a> test runner together with is <a href="https://github.com/karma-runner/karma-commonjs" target="_blank">CommonJS pre-processor</a> to test your code modually.</p>
-<p>The best practice is to export raw options / functions inside modules. Consider this example:</p>
+<p>利用这种机制很容易接入独立的路由库，如 <a href="https://github.com/visionmedia/page.js" target="_blank">Page.js</a> 或 <a href="https://github.com/flatiron/director" target="_blank">Director</a>。</p>
+<h2 id="服务器通信">服务器通信</h2>
+<p>所有的 Vue 实例都可以通过 <code>JSON.stringify()</code> 得到它们原始的 <code>$data</code>，没有任何副作用。你可以使用任何你喜欢的 Ajax 组件，比如 <a href="https://github.com/visionmedia/superagent" target="_blank">SuperAgent</a>。也可以和诸如 Firebase 这样的 no-backend 服务完美配合。</p>
+<h2 id="单元测试">单元测试</h2>
+<p>任何兼容 Common-JS 的构建系统都可以。建议使用 <a href="http://karma-runner.github.io/0.12/index.html" target="_blank">Karma</a> test runner 结合 <a href="https://github.com/karma-runner/karma-commonjs" target="_blank">CommonJS pre-processor</a> 对你的代码进行模块化测试。</p>
+<p>最佳实践是暴露出模块内的原始选项/函数。考虑一下这个示例：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre>1
 2
 3
@@ -178,7 +178,7 @@ module.exports = {
 </pre></td></tr></table></figure>
 
 
-<p>You can use that file in your entry module like this:</p>
+<p>你可以在你的入口模块中如下使用这个文件：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre>1
 2
 3
@@ -200,7 +200,7 @@ module.exports = {
 </pre></td></tr></table></figure>
 
 
-<p>And you can test that module like this:</p>
+<p>然后你可以如下测试该模块：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre>1
 2
 3
@@ -230,10 +230,10 @@ describe(<span class="string">'my-component'</span>, <span class="function"><spa
 </pre></td></tr></table></figure>
 
 
-<p class="tip">Since Vue.js directives react to data updates asynchronously, when you are asserting DOM state after changing the data, you will have to do so in a <code>Vue.nextTick</code> callback. Alternatively you can set <code>Vue.config.async = false</code> during tests, so you can assert the DOM state synchronously right after the data change.</p>
+<p class="tip">因为 Vue.js 指令异步反映数据的更新，当你需要在改变数据之后断言 DOM 的状态时，你需要在一个 <code>Vue.nextTick</code> 回调里完成断言。另外你可以在测试中设置 <code>Vue.config.async = false</code>，这样你就可以在数据改变之后同步断言 DOM 的状态了。</p>
 
-<h2 id="An_Example">An Example</h2>
-<p>The <a href="https://github.com/yyx990803/vue-hackernews" target="_blank">Vue.js Hackernews Clone</a> is an example application that uses Browserify + Vueify for code organization, Director.js for routing, and HackerNews’ official Firebase API as the backend. It’s by no means a big application, but it demonstrates the combined usage of the concepts discussed on this page.</p>
+<h2 id="一个示例">一个示例</h2>
+<p><a href="https://github.com/yyx990803/vue-hackernews" target="_blank">Vue.js Hackernews Clone</a> 是一个应用的例子，它把 Browserify + Vueify 用来代码组织、Director.js 用来做路由、HackerNews 官方的 Firebase API 为后端。这不算什么特别大的应用，但它结合并展示了本页面讨论到的各方面概念。</p>
 
     <div class="footer">发现了问题或想要贡献？来 Github 给 Vue.js <a href="https://github.com/vuejs/vuejs.org" target="_blank">英文站点</a>或<a href="https://github.com/Jinjiang/vuejs.org/tree/lang-zh" target="_blank">中文翻译</a>来个 Fork 吧！</div>
 </div>
