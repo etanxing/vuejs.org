@@ -106,8 +106,8 @@
     <div id="ad">
         <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs" id="_carbonads_js"></script>
     </div>
-    <h2 id="The_Basics">The Basics</h2>
-<p>Similar to custom directives, you can register a custom filter with the global <code>Vue.filter()</code> method, passing in a <strong>filterID</strong> and a <strong>filter function</strong>. The filter function takes a value as the argument and returns the transformed value:</p>
+    <h2 id="基本用法">基本用法</h2>
+<p>和自定义指令类似，你可以用全局方法 <code>Vue.filter()</code>，传递一个<strong>过滤器 ID</strong>和一个<strong>过滤器函数</strong>，注册一个自定义过滤器。过滤器函数会接受一个参数值并返回将其转换后的值：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre>1
 2
 3
@@ -126,7 +126,7 @@
 </pre></td></tr></table></figure>
 
 
-<p>The filter function also receives any inline arguments:</p>
+<p>过滤器函数也接受任何内联的参数：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre>1
 2
 3
@@ -145,8 +145,8 @@
 </pre></td></tr></table></figure>
 
 
-<h2 id="Two-way_Filters">Two-way Filters</h2>
-<p>Up till now we have used filters to transform values coming from the model and before displaying them in the view. But it is also possible to define a filter that transforms the value before it is written back to the model from the view (input elements):</p>
+<h2 id="双向过滤器">双向过滤器</h2>
+<p>现在我们已经在展示视图之前用过滤器把模型里的值进行了转换。其实我们也可以定义一个过滤器在值从视图 (input 元素) 写回模型之前进行转换：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre>1
 2
 3
@@ -174,8 +174,8 @@
 </pre></td></tr></table></figure>
 
 
-<h2 id="Filter_Context">Filter Context</h2>
-<p>When a filter is invoked, its <code>this</code> context is set to the Vue instance that is invoking it. This allows it to output dynamic results based on the state of the owner Vue instance.</p>
+<h2 id="过滤器上下文">过滤器上下文</h2>
+<p>当一个过滤器被调用的时候，其 <code>this</code> 上下文会被设置为调用它的 Vue 实例。这使得我们可以根据其所属的 Vue 实例动态输出结果。</p>
 <p>For example:</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre>1
 2
@@ -197,9 +197,9 @@
 </pre></td></tr></table></figure>
 
 
-<p>For this simple example above, you can achieve the same result with just an expression, but for more complicated procedures that need more than one statements, you need to put them either in a computed property or a custom filter.</p>
-<p>The built-in <code>filterBy</code> and <code>orderBy</code> filters are both filters that perform non-trivial work on the Array being passed in and relies on the current state of the owner Vue instance.</p>
-<p>Alright! Now it’s time to learn how the <a href="../guide/components.html">Component System</a> works.</p>
+<p>在上面这个例子中，你用表达式即可完成相同的结果。但是面对更复杂的处理时，如果需要不止一个语句，你就得把它们放到一个可推导的属性中或一个自定义过滤器中。</p>
+<p>内建的 <code>filterBy</code> 和 <code>orderBy</code> 过滤器都是根据传入的数组以及所属 Vue 实例状态而运行的过滤器。</p>
+<p>Alright！是时候了解<a href="../guide/components.html">组件系统</a>的工作方式了。</p>
 
     <div class="footer">发现了问题或想要贡献？来 Github 给 Vue.js <a href="https://github.com/vuejs/vuejs.org" target="_blank">英文站点</a>或<a href="https://github.com/Jinjiang/vuejs.org/tree/lang-zh" target="_blank">中文翻译</a>来个 Fork 吧！</div>
 </div>

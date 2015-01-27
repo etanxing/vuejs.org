@@ -106,9 +106,9 @@
     <div id="ad">
         <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs" id="_carbonads_js"></script>
     </div>
-    <h2 id="The_Basics">The Basics</h2>
-<p>You can use the <code>v-model</code> directive to create two-way data bindings on form input elements. It automatically picks the correct way to update the element based on the input type.</p>
-<p><strong>Example</strong></p>
+    <h2 id="基本用法">基本用法</h2>
+<p>你可以在表单的 input 元素上使用 <code>v-model</code> 指令来创建双向数据绑定。它会根据 input type 自动选取正确的方式更新元素。</p>
+<p><strong>示例</strong></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre>1
 2
 3
@@ -209,7 +209,7 @@
 </pre></td></tr></table></figure>
 
 
-<p><strong>Result</strong></p>
+<p><strong>效果</strong></p>
 <p><form id="demo"><p><input type="text" v-model="msg"> {&#123;msg&#125;}</p><p><input type="checkbox" v-model="checked"> {&#123;checked ? &quot;yes&quot; : &quot;no&quot;&#125;}</p><p><input type="radio" v-model="picked" name="picked" value="one"><input type="radio" v-model="picked" name="picked" value="two"> {&#123;picked&#125;}</p><p><select v-model="selected"><option>one</option><option>two</option></select> {&#123;selected&#125;}</p><p><select v-model="multiSelect" multiple><option>one</option><option>two</option><option>three</option></select>{&#123;multiSelect&#125;}</p><p>data:<pre style="font-size:13px;background:transparent;line-height:1.5em">{&#123;$data | json 2&#125;}</pre></p></form></p>
 <script>
 new Vue({
@@ -224,8 +224,8 @@ new Vue({
 })
 </script>
 
-<h2 id="Lazy_Updates">Lazy Updates</h2>
-<p>By default, <code>v-model</code> syncs the input with the data after each <code>input</code> event. You can add a <code>lazy</code> attribute to change the behavior to sync after <code>change</code> events:</p>
+<h2 id="懒更新">懒更新</h2>
+<p>默认情况下，<code>v-model</code> 会在每个 <code>input</code> 事件之后同步输入的数据。你可以添加一个 <code>lazy</code> 特性，将其改变为在每个 <code>change</code> 事件之后才完成同步。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre>1
 2
 </pre></td><td class="code"><pre><span class="comment">&lt;!-- synced after "change" instead of "input" --&gt;</span>
@@ -233,22 +233,22 @@ new Vue({
 </pre></td></tr></table></figure>
 
 
-<h2 id="Casting_Value_as_Number">Casting Value as Number</h2>
-<p>If you want user input to be automatically persisted as numbers, you can add a <code>number</code> attribute to your <code>v-model</code> managed inputs:</p>
+<h2 id="当做数来处理">当做数来处理</h2>
+<p>如果你希望用户的输入自动处理为一个数，你可以在 <code>v-model</code> 所在的 input 上添加一个 <code>number</code> 特性。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre>1
 </pre></td><td class="code"><pre><span class="tag">&lt;<span class="title">input</span> <span class="attribute">v-model</span>=<span class="value">"age"</span> <span class="attribute">number</span>&gt;</span>
 </pre></td></tr></table></figure>
 
 
-<h2 id="Dynamic_Select_Options">Dynamic Select Options</h2>
-<p>When you need to dynamically render a list of options for a <code>&lt;select&gt;</code> element, it’s recommended to use an <code>options</code> attribute together with <code>v-model</code>:</p>
+<h2 id="动态_select_选项">动态 select 选项</h2>
+<p>当你需要为一个 <code>&lt;select&gt;</code> 元素动态渲染列表选项时，我们推荐 <code>options</code> 和 <code>v-model</code> 特性配合使用：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre>1
 </pre></td><td class="code"><pre><span class="tag">&lt;<span class="title">select</span> <span class="attribute">v-model</span>=<span class="value">"selected"</span> <span class="attribute">options</span>=<span class="value">"myOptions"</span>&gt;</span><span class="tag">&lt;/<span class="title">select</span>&gt;</span>
 </pre></td></tr></table></figure>
 
 
-<p>In your data, <code>myOptions</code> should be an keypath/expression that points to an Array to use as its options. The Array can contain plain strings, or contain objects.</p>
-<p>The object can be in the format of <code>{text:&#39;&#39;, value:&#39;&#39;}</code>. This allows you to have the option text displayed differently from its underlying value:</p>
+<p>在你的数据里，<code>myOptions</code> 应该是一个代表选项数组的路径/表达式。该数组可以包含普通字符串或对象。</p>
+<p>该数组里对象的格式可以是 <code>{text:&#39;&#39;, value:&#39;&#39;}</code>。这允许你把展示的文字和其背后对应的值区分开来。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre>1
 2
 3
@@ -260,7 +260,7 @@ new Vue({
 </pre></td></tr></table></figure>
 
 
-<p>Will render:</p>
+<p>会渲染成：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre>1
 2
 3
@@ -272,7 +272,8 @@ new Vue({
 </pre></td></tr></table></figure>
 
 
-<p>Alternatively, the object can be in the format of <code>{ label:&#39;&#39;, options:[...] }</code>. In this case it will be rendered as an <code>&lt;optgroup&gt;</code>:</p>
+<p><!-- Alternatively, the object can be in the format of `{ label:'', options:[...] }`. In this case it will be rendered as an `<optgroup>`:
+-->另外，该数组里对象的格式也可以是 <code>{label:&#39;&#39;, options:[...]}</code>。这样的数据会被渲染成为一个 <code>&lt;optgroup&gt;</code>：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre>1
 2
 3
@@ -284,7 +285,7 @@ new Vue({
 </pre></td></tr></table></figure>
 
 
-<p>Will render:</p>
+<p>会渲染成：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre>1
 2
 3
@@ -308,7 +309,7 @@ new Vue({
 </pre></td></tr></table></figure>
 
 
-<p>Next: <a href="../guide/computed.html">Computed Properties</a>.</p>
+<p>接下来：<a href="../guide/computed.html">可推导的属性</a>.</p>
 
     <div class="footer">发现了问题或想要贡献？来 Github 给 Vue.js <a href="https://github.com/vuejs/vuejs.org" target="_blank">英文站点</a>或<a href="https://github.com/Jinjiang/vuejs.org/tree/lang-zh" target="_blank">中文翻译</a>来个 Fork 吧！</div>
 </div>
